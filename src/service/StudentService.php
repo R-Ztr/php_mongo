@@ -4,15 +4,16 @@ namespace src\service;
 
 use PDOException;
 use src\model\Student;
-use src\repository\StudentRepository;
+use src\repository\StudentRepositoryInterface;
 
 class StudentService
 {
     // Définition des regex à utiliser sous forme de constantes
     const DATE_PATTERN = "/^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/";
     const EMAIL_PATTERN = "/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/";
-
-    public function __construct(private StudentRepository $studentRepository){}
+	
+	public function __construct(private StudentRepositoryInterface $studentRepository)
+{}
 
     // Permet d'afficher les étudiants
     function displayStudents(): void

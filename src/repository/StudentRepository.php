@@ -6,7 +6,7 @@ use PDO;
 use src\mapper\StudentMapper;
 use src\model\Student;
 
-class StudentRepository {
+class StudentRepository implements StudentRepositoryInterface {
     public function __construct(private PDO $db) {}
 
     public function findAll() {
