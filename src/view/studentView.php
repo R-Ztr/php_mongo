@@ -36,7 +36,7 @@
 	</tr>
 	<?php foreach ($controller->getAllStudents() as $etudiant): ?>
 		<tr>
-			<td><?= htmlspecialchars($etudiant['id']) ?></td>
+			<td><?= htmlspecialchars($etudiant['_id']) ?></td>
 			<td><?= htmlspecialchars($etudiant['nom']) ?></td>
 			<td><?= htmlspecialchars($etudiant['prenom']) ?></td>
 			<td><?= htmlspecialchars($etudiant['date_naissance'] ?? '') ?></td>
